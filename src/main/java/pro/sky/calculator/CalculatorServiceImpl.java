@@ -8,35 +8,16 @@ public class CalculatorServiceImpl implements CalculatorService{
         return "Добро пожаловать в калькулятор";
     }
 
-    public String plus(Integer num1, Integer num2) {
-        if (num2 == null || num1 == null || (num2 == null && num1 == null)) {
-            return "Ошибка ввода данных";
-        }
-        int result = num1 + num2;
-        return num1 + " + " + num2 + " = " + result;
+    public int plus(int num1, int num2) {
+        return num1 + num2;
     }
-    public String minus(Integer num1, Integer num2) {
-        if (num2 == null || num1 == null || (num2 == null && num1 == null)) {
-            return "Ошибка ввода данных";
-        }
-        int result = num1 - num2;
-        return num1 + " - " + num2 + " = " + result;
+    public int minus(int num1, int num2) {
+        return num1 - num2;
     }
-    public String multiply(Integer num1, Integer num2) {
-        if (num2 == null || num1 == null || (num2 == null && num1 == null)) {
-            return "Ошибка ввода данных";
-        }
-        int result = num1 * num2;
-        return num1 + " * " + num2 + " = " + result;
+    public int multiply(int num1, int num2) {
+        return num1 * num2;
     }
-    public String divide(Integer num1, Integer num2) {
-        if (num2 == null || num1 == null || (num2 == null && num1 == null)) {
-            return "Ошибка ввода данных";
-        }
-        if (num2 == 0) {
-            return "Делить на 0 нельзя";}
-        double result = (double) num1 / num2;
-        return num1 + " / " + num2 + " = " + result;
+    public double divide(int num1, int num2) {
+        return (double) num1 / num2;
     }
-
 }
